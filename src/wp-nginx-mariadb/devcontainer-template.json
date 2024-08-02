@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "name": "WP, nginx, MariaDB",
     "description": "Develop WP applications with Nginx and MariaDB.",
-    "documentationURL": "https://github.com/sgr33n/dev-container-templates/tree/main/src/wp-nginx-mariadb",
+    "documentationURL": "https://github.com/sgr33n/dev-containers/tree/main/src/wp-nginx-mariadb",
     "publisher": "ServerWP Cloud",
-    "licenseURL": "https://github.com/sgr33n/dev-container-templates/blob/main/LICENCE",
+    "licenseURL": "https://github.com/sgr33n/dev-containers/blob/main/LICENCE",
     "options": {
         "phpVersion": {
             "type": "string",
