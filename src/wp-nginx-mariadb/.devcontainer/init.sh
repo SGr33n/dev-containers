@@ -3,8 +3,7 @@
 set -eux
 
 WP_PATH="$1"
-$TEST=1000
 echo "\
-USER_UID=$TEST
+USER_UID=$(id -u $USER)
 WP_PATH=$WP_PATH
 " > .devcontainer/.env
