@@ -8,7 +8,8 @@
 	"initializeCommand": [
 		"bash",
 		".devcontainer/init.sh",
-		"/var/www/html/wp-content/plugins/${localWorkspaceFolderBasename}"
+		"/var/www/html/wp-content/plugins/${localWorkspaceFolderBasename}",
+		"sgr33n"
 	],
 	"remoteUser": "vscode",
 
