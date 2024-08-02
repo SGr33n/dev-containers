@@ -103,7 +103,7 @@ COPY wp-config.php /var/www/html/
 COPY info.php /var/www/html/
 
 ARG USER_UID=1000
-ARG USER_GID=1000
+ARG USER_GID=$USER_UID
 ARG WP_PATH
 
 # Create the user
