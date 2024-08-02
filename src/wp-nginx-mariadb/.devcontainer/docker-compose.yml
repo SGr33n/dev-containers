@@ -1,0 +1,45 @@
+services:
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+    ports:
+      - "9030:3306"
+    volumes:
+      - mysqldb-data:/var/lib/mysql
+
+  backend:
+    depends_on:
+      - db
+    build:
+      context: .
+      args:
+        USER_UID: ${USER_UID}
+        WP_PATH: ${WP_PATH}
+    environment:
+      VSCODE_WORKSPACE: "${WP_PATH}"
+    ports:
+      - "80:80"
+    volumes:
+      - "./..:/workspace"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: wordpress
+    ports:
+      - "8081:80"
+
+  memcached:
+    depends_on:
+      - backend
+    image: memcached:latest 
+    command: ["-m", "64"]  
+    ports:  
+    - "11211:11211"   
+
+volumes:
+  mysqldb-data:
