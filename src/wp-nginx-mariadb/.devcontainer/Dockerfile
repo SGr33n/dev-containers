@@ -85,7 +85,7 @@ VOLUME [ "/var/www/html" ]
 
 # Install WordPress
 RUN set -eux; \
-	version="${templateOption:wpVersion}"; \
+	version="6.5.5"; \
 	\
 	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; \
 	\
@@ -107,8 +107,8 @@ ARG USER_GID=$USER_UID
 ARG WP_PATH
 
 # Create the user
-RUN groupadd --gid 1000 vscode \
-	&& useradd -s /bin/bash --uid $USER_UID --gid 1000 -m vscode \
+RUN groupadd --gid $USER_GID vscode \
+	&& useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m vscode \
 	&& usermod -a -G www-data vscode \
 	&& usermod -a -G sudo vscode \
 	&& echo "vscode ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vscode
