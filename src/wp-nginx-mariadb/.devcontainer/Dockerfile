@@ -85,7 +85,7 @@ VOLUME [ "/var/www/html" ]
 
 # Install WordPress
 RUN set -eux; \
-	version=WP_VERSION; \
+	version=$WP_VERSION; \
 	\
 	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; \
 	\
