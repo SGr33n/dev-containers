@@ -1,6 +1,6 @@
 {
     "id": "wp-nginx-mariadb",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "name": "WP, nginx, MariaDB",
     "description": "Develop WP applications with Nginx and MariaDB.",
     "documentationURL": "https://github.com/sgr33n/dev-containers/tree/main/src/wp-nginx-mariadb",
