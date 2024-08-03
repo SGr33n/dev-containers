@@ -87,7 +87,7 @@ VOLUME [ "/var/www/html" ]
 RUN set -eux; \
 	version="6.6"; \
 	\
-	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; \
+	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$WP_VERSION.tar.gz"; \
 	\
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
 	tar -xzf wordpress.tar.gz -C /usr/src/; \
