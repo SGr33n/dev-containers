@@ -10,7 +10,7 @@
 		".devcontainer/init.sh",
 		"/var/www/html/wp-content/plugins/${localWorkspaceFolderBasename}"
 	],
-	"remoteUser": "root",
+	"remoteUser": "vscode",
 
 	"customizations": {
 		"vscode": {
