@@ -1,6 +1,6 @@
 // More info: https://containers.dev/implementors/json_reference/
 {
-	"name": "WP & MySQL",
+	"name": "WP, Nginx and MariaDB",
 
 	"service": "backend",
 	"dockerComposeFile": "docker-compose.yml",
