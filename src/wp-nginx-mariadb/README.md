@@ -8,7 +8,7 @@ Develop WP applications with Nginx and MariaDB.
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | phpVersion | PHP version: | string | 8.2 |
-| wpVersion | WP version: | string | 6.0 |
+| wpVersion | WP version: | string | 6.6 |
 | contentPath | Content path: | string | themes |
 
 
